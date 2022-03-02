@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --white: white;
+    --white_dull: #FAFAFA;
+    --blue: #3B49DF;
+    --transparent_blue: #3b49df18;
+    --heading-clr: #242424;
+    --txt-clr: #242424;
+}
+
+body{
+    background: #eee !important;
+}
+
+header{
+    background: var(--white);
+    width: 100vw !important;
+}
+
+header button{
+    background: none;
+    border: none;
+    outline: none;
+}
+header button .fa{
+    font-size: 24px;
+}
+
+header input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+header form{
+    box-shadow: 0 0 2px #777;
+    border-radius: 5px;
+    transition: .1s;
+}
+
+header form button i{
+    font-size: 24px;
+    color: var(--txt-clr);
+}
+header form button:hover{
+    color: var(--blue) !important;
+    background: var(--transparent_blue);
+    border-radius: 5px;
+}
+
+.login_btn{
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.login_btn:hover{
+    background: var(--transparent_blue);
+    color: var(--blue);
+    text-decoration: underline var(--blue);
+    border-radius: 5px;
+}
+
+.create_btn{
+    background: none;
+    outline: none;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    border-radius: 5px;
+    font-weight: 600;
+}
+.create_btn:hover{
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: underline var(--white);
+}
+
+.sidenav h5{
+    line-height: 1.3em;
+    font-weight: 700;
+}
+.sidenav h5 a{
+    color: var(--blue);
+    text-decoration: none;
+}
+.sidenav h5 a:hover{
+    color: var(--blue);
+    text-decoration: underline var(--blue);
+}
+
+.cont{
+    background: var(--white_dull);
+    border-radius: 5px;
+    box-shadow: 0 0 1px #777;
+}
+p{
+    color: var(--txt-clr);
+}
+
+.sidenav{
+    width: 19%;
+}
+
+.sidenav ul li{
+    list-style: none;
+}
+.sidenav ul li a{
+    color: var(--heading-clr);
+    text-decoration: none;
+}
+
+.sidenav ul li:hover{
+    background: var(--transparent_blue);
+}
+.sidenav ul li:hover a{
+    color: var(--blue);
+    text-decoration: underline var(--blue);
+}
+
+#tags{
+    max-height: 50vh;
+    overflow-y: scroll;
+}
+
+.rightsidebar{
+    width: 28%;
+}
+
+.rightsidebar .heading h5{
+    font-weight: 700;
+}
+
+.rightsidebar .heading a{
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+.rightsidebar .list a{
+    width: 100% !important;
+    color: var(--txt-clr);
+    text-decoration: none;
+}
+.rightsidebar .list a:hover div{
+    background: white !important;
+    color: var(--blue);
+}
+.rightsidebar .list a span{
+    text-align: center;
+    width: 100% !important;
+}
+.rightsidebar .bg-warning{
+    border-radius: 5px !important;
+    padding: 1px 3px;
+}
+
+.main_content{
+    width: 53%;
+}
+.main_content .head a{
+    color: var(--txt-clr);
+    text-decoration: none;
+    font-size: large;
+}
+.main_content .head a:hover{
+    background: white;
+    border-radius: 5px;
+    color: var(--blue);
+}
+.msg{
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--txt-clr);
+    background: white;
+}
+.msg img{
+    border-radius: 5px 5px 0 0;
+}
+.msg p{
+    line-height: 1em;
+}
+.msg .user_img{
+    border-radius: 50%;
+}
+.msg .username{
+    font-size: 16px;
+    font-weight: 600;
+}
+.msg .date{
+    font-size: 14px;
+}
+.msg h4{
+    font-weight: 700;
+}
+.msg a{
+    color: var(--txt-clr);
+    text-decoration: none;
+}
+.msg .hashtag a{
+    color: var(--txt-clr);
+    text-decoration: none;
+    padding: 1px 3px;
+    font-size: 14px;
+}
+.msg .user_img{
+    width: 30px;
+    height: 30px;
+}
+.msg button{
+    background: #ddd;
+    border: none;
+    outline: none;
+    height: fit-content;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+.msg .act a{
+    font-size: 14px;
+}
+.msg .hashtag:hover, .msg .act a:hover{
+    background: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 0 2px #ddd;
+}
+
+
+
+
+
+@media screen and (max-width: 992px) {
+    .sidenav{
+        width: 30%;
+    }
+    .main_content{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+    .sidenav{
+        display: none;
+    }
+    .sidenav.active{
+        display: block;
+        position: absolute;
+        width: 98vw;
+        height: 98vh;
+        overflow-y: scroll;
+        padding: 1vh 1vw;
+        background: white;
+        top: 0;
+        left: 0;
+    }
+    .main_content{
+        width: 100%;
+    }
+}
